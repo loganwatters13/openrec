@@ -1,6 +1,7 @@
 from openrec.recommenders import BPR
 from openrec.modules.extractions import LatentFactor, MultiLayerFC
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 
 def VBPR(batch_size, dim_user_embed, dim_item_embed, dim_v, total_users, total_items, l2_reg_embed=None,
