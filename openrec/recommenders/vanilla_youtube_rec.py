@@ -1,7 +1,8 @@
 from openrec.recommenders import Recommender
 from openrec.modules.extractions import LatentFactor, MultiLayerFC
 from openrec.modules.interactions import MLPSoftmax
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 def VanillaYouTubeRec(batch_size, dim_item_embed, max_seq_len, total_items, 
                       l2_reg_embed=None, l2_reg_mlp=None, dropout=None, init_model_dir=None, 
