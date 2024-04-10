@@ -1,4 +1,5 @@
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 def PairwiseLog(user_vec, subgraph, item_vec=None, item_bias=None, p_item_vec=None, 
                 p_item_bias=None, n_item_vec=None, n_item_bias=None,
