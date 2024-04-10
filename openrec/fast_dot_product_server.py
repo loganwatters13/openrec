@@ -1,5 +1,6 @@
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 from termcolor import colored
 from openrec.recommenders import PMF
 from openrec.modules.extractions import LatentFactor
