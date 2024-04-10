@@ -1,4 +1,5 @@
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 def RNNSoftmax(seq_item_vec, total_items, seq_len, num_units, cell_type='gru', softmax_samples=None,
                    label=None, train=True, subgraph=None, scope=None):
