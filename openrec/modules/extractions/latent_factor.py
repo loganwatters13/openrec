@@ -1,5 +1,5 @@
-import tensorflow as tf
-
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 def LatentFactor(shape, id_=None, l2_reg=None, init='normal', 
                 subgraph=None, scope=None):
 
