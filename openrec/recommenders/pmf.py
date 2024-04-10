@@ -1,7 +1,8 @@
 from openrec.recommenders import Recommender
 from openrec.modules.extractions import LatentFactor
 from openrec.modules.interactions import PointwiseMSE
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 def PMF(batch_size, dim_user_embed, dim_item_embed, total_users, total_items, a=1.0, b=1.0, l2_reg=None,
     init_model_dir=None, save_model_dir='Recommender/', train=True, serve=False):
